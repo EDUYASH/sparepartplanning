@@ -1,4 +1,5 @@
-Spare Part Planning Application
+<h1>Spare Part Planning Application</h1>
+
 This project comprises both the frontend and backend components of the Spare Part Planning Application. The frontend is built using React.js, while the backend is developed using Spring Boot. The application manages spare part inventory, job sheets, service centers, and more, utilizing a MySQL database.
 
 Table of Contents
