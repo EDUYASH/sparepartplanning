@@ -1,0 +1,17 @@
+.Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://us.123rf.com/450wm/loft39studio/loft39studio2307/loft39studio230704060/207870003-minsk-belarus-dec-15-2021-photo-of-a-warehouse-with-boxes-on-the-shelves-utility-room-of-a.jpg?ver=6'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  .bg-image {
+    background-image: url('https://us.123rf.com/450wm/loft39studio/loft39studio2307/loft39studio230704060/207870003-minsk-belarus-dec-15-2021-photo-of-a-warehouse-with-boxes-on-the-shelves-utility-room-of-a.jpg?ver=6');
+    background-size: cover;
+    background-position: center;
+  }
+  
