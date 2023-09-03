@@ -3,10 +3,12 @@ import React from 'react';
  import JobSheetsPage from './JobSheetsPage';
  import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
  import './Home.css';
+ import NavigationBar from './NavigationBar';
 
 const HomePage = ({ userName, userRole }) => {
   
   return (
+  
     <div className="Home bg-image">
     <div className="bg-gradient-to-r from-blue-400 to-purple-600 p-8 text-white ">
       <h1 className="text-4xl font-semibold mb-2">Welcome, {userName}!</h1>
@@ -32,7 +34,7 @@ const HomePage = ({ userName, userRole }) => {
         >
          Prepare Dispatch Plans
         </reactRouterDom.Link> 
-        <reactRouterDom.Link
+        {/* <reactRouterDom.Link
           to="/CustomerQuery"
           className="block bg-white text-gray-700 py-2 px-4 rounded-lg shadow-md hover:bg-gray-200 transition duration-300"
         >
@@ -43,7 +45,7 @@ const HomePage = ({ userName, userRole }) => {
           className="block bg-white text-gray-700 py-2 px-4 rounded-lg shadow-md hover:bg-gray-200 transition duration-300"
         >
          Ware-House Management
-        </reactRouterDom.Link> 
+        </reactRouterDom.Link>  */}
         {/* <Link
           to="/login"
           className="block bg-white text-gray-700 py-2 px-4 rounded-lg shadow-md hover:bg-gray-200 transition duration-300"

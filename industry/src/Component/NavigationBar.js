@@ -39,14 +39,7 @@ const NavigationBar = () => {
               <FaTruck className="mr-2" />Dispatch Plans
             </a>
           </li>
-          <li>
-            <a
-              href="/CustomerQuery"
-              className="text-white hover:text-gray-200 flex items-center"
-            >
-              <FaTruck className="mr-2" />Customer Query
-            </a>
-          </li>
+          
           {/* Add more links as needed */}
         </ul>
       </div>

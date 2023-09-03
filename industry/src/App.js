@@ -29,8 +29,8 @@ function App() {
     <Route path="/dispatch-plans" element={<DispatchPlansPage/>}/>
      <Route path="/dispatch-plans/${dispatchPlans.id}" element={<ViewDetailsPage id="${dispatchPlans.id}"/>}/> 
     <Route path="/dashboard" element={<DashboardPage/>}/>
-    <Route path="/CustomerQuery" element={<CustomerQueryPage/>}/>
-    <Route path="/warehouse" element={<WarehouseManagementPage/>}/>
+    {/* <Route path="/CustomerQuery" element={<CustomerQueryPage/>}/> */}
+    {/* <Route path="/warehouse" element={<WarehouseManagementPage/>}/> */}
     <Route path="/login" element={<LoginSignupPage/>}/>
      <Route path="/" element={<AuthenticationPage />} />
      <Route path="/Createjobsheets" element={<CreateJobSheet />} />
