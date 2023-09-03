@@ -98,8 +98,6 @@
  - Dheeraj Karnani
  - https://github.com/DheerajKarnani660 
 
-  <h2 id="acknowledgements">Acknowledgements</h2>
-  <p>Special thanks to our team and contributors for making this project possible.</p>
 
 
 
