@@ -94,7 +94,7 @@
 
  Author
  - Yash Rathi
- - https://github.com/EDUYASH/sparepartplanning
+ - https://github.com/EDUYASH
  - Dheeraj Karnani
  - https://github.com/DheerajKarnani660 
 
