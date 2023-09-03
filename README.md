@@ -23,7 +23,7 @@
     </ol>
     <li><a href="#api-documentation">API Documentation</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#TechnologiesUsed">License</a></li>
+    <li><a href="#TechnologiesUsed">Technology Used</a></li>
     
   </ol>
 
