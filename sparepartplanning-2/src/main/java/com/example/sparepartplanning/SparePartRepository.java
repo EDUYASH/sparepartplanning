@@ -7,6 +7,6 @@ import java.util.List;
 import java.util.Set;
 
 public interface SparePartRepository extends JpaRepository<SparePart, Long> {
-    List<SparePart> findAllBySkuIn(Set<String> set);
+    List<SparePart> findAllBySkuIn(List<String> list);
 }
 

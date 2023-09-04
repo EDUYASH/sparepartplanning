@@ -29,7 +29,7 @@ const HomePage = ({ userName, userRole }) => {
           View Job Sheets
         </reactRouterDom.Link> 
         <reactRouterDom.Link
-          to="/dispatchPlans"
+          to="/dispatch-plans"
           className="block bg-white text-gray-700 py-2 px-4 rounded-lg shadow-md hover:bg-gray-200 transition duration-300"
         >
          Prepare Dispatch Plans
