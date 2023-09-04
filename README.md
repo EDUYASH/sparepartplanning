@@ -23,12 +23,16 @@
     </ol>
     <li><a href="#api-documentation">API Documentation</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#TechnologiesUsed">Technology Used</a></li>
+    
   </ol>
 
   <h2 id="getting-started">Getting Started</h2>
-
+  <h2 id="TechnologiesUsed">Technology Used</h2>
+  <p>- React.js
+- Axios
+- HTML
+- CSS (Tailwind CSS)</p>
   <h3 id="prerequisites">Prerequisites</h3>
   <p>Ensure you have the following tools installed:</p>
   <ul>
@@ -94,12 +98,10 @@
 
  Author
  - Yash Rathi
- - https://github.com/EDUYASH/sparepartplanning
+ - https://github.com/EDUYASH
  - Dheeraj Karnani
  - https://github.com/DheerajKarnani660 
 
-  <h2 id="acknowledgements">Acknowledgements</h2>
-  <p>Special thanks to our team and contributors for making this project possible.</p>
 
 
 
