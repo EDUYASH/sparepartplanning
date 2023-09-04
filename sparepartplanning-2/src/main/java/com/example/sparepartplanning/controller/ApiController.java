@@ -7,36 +7,16 @@ import com.example.sparepartplanning.*;
 import com.example.sparepartplanning.model.*;
 import com.example.sparepartplanning.model.request.InventoryRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.example.sparepartplanning.model.PartRequirement;
-
 
 @RestController
 @RequestMapping("/api")
 public class ApiController {
-	
 
-	@RestController
-	@RequestMapping("/api/part-requirements")
-	public class PartRequirementController {
-
-	    private final PartRequirementRepository partRequirementRepository;
-
-	    @Autowired
-	    public PartRequirementController(PartRequirementRepository partRequirementRepository) {
-	        this.partRequirementRepository = partRequirementRepository;
-	    }
-
-	    @PostMapping
-	    public ResponseEntity<PartRequirement> createPartRequirement(@RequestBody PartRequirement partRequirement) {
-	        PartRequirement createdPartRequirement = partRequirementRepository.save(partRequirement);
-	        return ResponseEntity.ok(createdPartRequirement);
-	    }
-	}
-	
     private final SparePartRepository sparePartRepository;
     private final ServiceCenterRepository serviceCenterRepository;
     private final JobSheetRepository jobSheetRepository;
@@ -46,7 +26,7 @@ public class ApiController {
     public ResponseEntity<String> updateInventoryQuantity(
             @PathVariable Long serviceCenterId,
             @PathVariable Long sparePartId,
-            @RequestBody int quantity){
+            @RequestBody int quantity) {
 
         ServiceCenter serviceCenter = serviceCenterRepository.findById(serviceCenterId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Service Center not found with id: " + serviceCenterId));

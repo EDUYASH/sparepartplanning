@@ -15,6 +15,7 @@
       <li><a href="#prerequisites">Prerequisites</a></li>
       <li><a href="#installation">Installation</a></li>
       <li><a href="#configuration">Configuration</a></li>
+      <li><a href="#adding-service-center">Adding Service Center</a></li>
     </ol>
     <li><a href="#usage">Usage</a></li>
     <ol>
@@ -72,8 +73,16 @@
 
   <h3 id="configuration">Configuration</h3>
   <p>Ensure your database credentials are correctly configured in <code>spare-part-planning-2/application.properties</code>.</p>
-
-  <h2 id="usage">Usage</h2>
+  <h2 id="adding-service-center">Adding Service Center</h2>
+  <p>In order to run this project, you need to start by adding a service center using the API. You can do this by making a
+    POST request to the following endpoint:</p>
+  <p><code>POST http://localhost:8080/api/service-center</code></p>
+  <p>Make sure to include the necessary data in the request body, such as:</p>
+  <pre><code>{
+    "location": "Your Service Center Location","warehouseZone": "Your warehouse location"
+  }</code></pre>
+  <p>This API call will add a service center to the database.</p>
+    <h2 id="usage">Usage</h2>
 
   <h3 id="logging-in">Logging In</h3>
   <p>After starting the frontend at <code>localhost:3000</code>, you'll see a login page. Use the following credentials:</p>

@@ -45,6 +45,7 @@ const CheckInventoryForm = () => {
       );
   
       console.log(response.data); // Log the response from the API
+      alert('Diagnose successful');
     } catch (error) {
       console.error('Error diagnosing device:', error);
     }
@@ -73,22 +74,22 @@ const CheckInventoryForm = () => {
           />
         </div>
         <div className="mb-4">
-          <label className="block font-medium">SKU ID</label>
-          <select
-            name="skuId"
-            value={formData.skuId}
-            onChange={handleInputChange}
-            className="border p-2 w-full rounded-md"
-          >
-            <option value="">Select SKU ID</option>
-            {inventoryData &&
-              inventoryData.map((item) => (
-                <option key={item.id} value={item.sparePart.sku}>
-                  {item.sparePart.sku}
-                </option>
-              ))}
-          </select>
-        </div>
+  <label className="block font-medium">SKU ID</label>
+  <select
+    name="skuId"
+    value={formData.skuId}
+    onChange={handleInputChange}
+    className="border p-2 w-full rounded-md"
+  >
+    <option value="">Select SKU ID</option>
+    {inventoryData &&
+      Array.from(new Set(inventoryData.map(item => item.sparePart.sku))).map(sku => (
+        <option key={sku} value={sku}>
+          {sku}
+        </option>
+      ))}
+  </select>
+</div>
         <div className="mb-4">
           <label className="block font-medium">Quantity</label>
           <input

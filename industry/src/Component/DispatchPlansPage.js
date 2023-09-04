@@ -1,6 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 const DispatchPlanPage = () => {
   const [dispatchPlans, setDispatchPlans] = useState([]);
 
@@ -15,9 +15,33 @@ const DispatchPlanPage = () => {
       });
   }, []);
 
-  const handlePrepareDispatch = (planId) => {
-    alert('Dispatch successful');
-    setDispatchPlans(prevPlans => prevPlans.filter(plan => plan.id !== planId));
+  const handlePrepareDispatch = async (planId, serviceCenterId, sku, quantity) => {
+    console.log('handlePrepareDispatch called with planId:', planId);
+    console.log('serviceCenterId:', serviceCenterId);
+    try {
+      const inventoryQuantityMap = {
+        [sku]: quantity
+      };
+
+      const requestBody = {
+        inventoryQuantityMap
+      };
+      console.log('Request Body:', requestBody);
+      
+      const response = await axios.post(
+        `http://localhost:8080/api/add-inventory/${serviceCenterId}`,
+        requestBody
+      );
+      console.log('API Response:', response.data);
+      
+      if (response.status === 200) {
+        alert('Dispatch successful');
+        setDispatchPlans(prevPlans => prevPlans.filter(plan => plan.id !== planId));
+      }
+    } catch (error) {
+      console.error('Error preparing dispatch plan:', error);
+      // Handle error scenario here
+    }
   };
 
   return (
@@ -40,7 +64,7 @@ const DispatchPlanPage = () => {
               <p>Date: {plan.date.join('-')}</p>
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mt-2"
-                onClick={() => handlePrepareDispatch(plan.id)}
+                onClick={() => handlePrepareDispatch(plan.id, plan.serviceCenter.centerId, plan.sku.sku, plan.quantity)}
               >
                 Prepare Dispatch Plan
               </button>
